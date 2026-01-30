@@ -17,3 +17,23 @@ gsap.from("#box2",{
 })
 
 // This tells the box to start at x:1000 and move back to its original spot (CSS)
+
+gsap.from("h1",{
+      opacity:0,
+      duration:1,
+      y:30,
+      delay:1,
+      // stagger:0.3,
+      //if we want the stagger to go with reverse then we will use the negative property like(stagger : -1;)
+      stagger:-1,
+})
+
+gsap.to("#box3",{
+      x :1200,
+      duration:2,
+      delay:1,
+      rotate:360,
+      repeat:-1,
+      // yoyo:true,
+      opacity:0,
+})
