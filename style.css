@@ -22,3 +22,34 @@ html, body {
       width: 300px;
       background-color: #ff5361;
 }
+
+#page1{
+      width: 100%;
+      height: 100%;
+      background-color: darkblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+#page2{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(77, 77, 175);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+#page3{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(41, 41, 80);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.box{
+      height: 300px;
+      width: 300px;
+      background-color: rgb(189, 0, 236);
+}
