@@ -6,6 +6,12 @@ gsap.to("#box1", {
   rotate: 360,
   backgroundColor: "pink",
   borderRadius: "50%",
+  // scrollTrigger: {
+  //   scroller: "body",
+  //   trigger: "#box1",
+  //   scrub: 2,
+  //   // start: "top 60%",
+  // },
   //     scale :2
   //     ease: "power2.out"  // Makes the movement smooth (starts fast, slows down at end)
 });
@@ -14,6 +20,11 @@ gsap.from("#box2", {
   // opacity:0,
   duration: 2,
   delay: 1,
+  // scrollTrigger:{
+  //   scroller:"body",
+  //   trigger:"#box2",
+  //   // scrub:2,
+  // }
 });
 
 // This tells the box to start at x:1000 and move back to its original spot (CSS)
@@ -23,28 +34,37 @@ gsap.from("h1", {
   duration: 1,
   y: 30,
   delay: 1,
+  //stagger added to
   // stagger:0.3,
   //if we want the stagger to go with reverse then we will use the negative property like(stagger : -1;)
   // stagger:-1,
 });
 
 gsap.to("#box3", {
-  x: 1200,
+  x: 1000,
   duration: 2,
   delay: 1,
   rotate: 360,
+  // scrollTrigger:{
+  //   scroller:"body",
+  //   trigger:"#box3",
+  //   scrub:2,
+  // }
   // repeat:-1,
   // yoyo:true,
   // opacity:0,
 });
 
 //the use of the timeline is like when we work with different element in from same section where contain same element that is required to move one after one and thats's where we need to calculate the duration time to show the animation  in the webSite that's why we need timeline so that we do not need to calculate each one by each one , that's the reason why we need to use the timeline;
+
+
+//timeline added 
 var tl = gsap.timeline();
 
 tl.from("box2", {
   stagger: -1,
 });
-
+//trigger added to the box 
 gsap.from("#page1 .box", {
   scale: 0,
   delay: 1,
@@ -79,6 +99,7 @@ gsap.from("#page3 .box", {
   rotate: 360,
   scrollTrigger: {
     trigger: "#page3 .box",
+    //in the scrolltrigger must be add the scroller 
     scroller: "body",
     markers: true,
     start: "top 60%",
